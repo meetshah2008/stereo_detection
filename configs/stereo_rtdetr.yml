@@ -1,0 +1,26 @@
+# Model Configuration
+model:
+  num_classes: 3  # Update based on your classes
+  hidden_dim: 256
+  num_queries: 100
+  backbone_channels: [64, 128, 256, 512]
+  fusion_method: 'concat'
+
+# Training Configuration
+training:
+  batch_size: 4
+  epochs: 100
+  learning_rate: 0.001
+  img_size: 640
+
+# Data Configuration
+data:
+  root_path: 'path/to/your/data'
+  train_split: 0.8
+  augment: true
+
+# Loss Configuration
+loss:
+  alpha: 0.25
+  gamma: 2.0
+  disparity_weight: 0.1
